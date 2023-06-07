@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
@@ -17,21 +17,20 @@
 
     <!-- Usando Vite -->
     @vite(['resources/js/app.js'])
+
+
+
+
 </head>
 
 <body>
-    <div id="app">
+    <header>
+        @include('partials.guest-header')
+        @includeWhen(Route::currentRouteName() === 'home', 'partials.guest-hero')
+    </header>
 
-        <header>
-            @include('partials.guest-header')
-            @includeWhen(Route::currentRouteName() === 'home', 'partials.guest-hero')
-        </header>
+    @yield('admin_content')
 
-
-        <main>
-            @yield('content')
-        </main>
-    </div>
 </body>
 
 </html>
