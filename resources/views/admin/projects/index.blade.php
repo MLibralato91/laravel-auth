@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('admin_content')
+@section('content')
     <div class="container">
         <table class="table">
             <thead>

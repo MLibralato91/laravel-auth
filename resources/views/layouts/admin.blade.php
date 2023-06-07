@@ -29,7 +29,7 @@
         @includeWhen(Route::currentRouteName() === 'home', 'partials.guest-hero')
     </header>
 
-    @yield('admin_content')
+    @yield('content')
 
 </body>
 
