@@ -2,6 +2,15 @@
 
 @section('content')
     <div class="container">
+        <h1>My Projects</h1>
+        <div class="text-end">
+            <a class="btn btn-success" href="{{ route('admin.projects.create') }}">Crea nuovo post</a>
+        </div>
+        @if (session()->has('message'))
+            <div class="alert alert-success">
+                {{ session()->get('message') }}
+            </div>
+        @endif
         <table class="table">
             <thead>
                 <tr>

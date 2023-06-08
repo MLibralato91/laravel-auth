@@ -17,7 +17,7 @@
               <ul class="navbar-nav me-auto">
                   <li class="nav-item">
                       <a class="nav-link" href="{{ url('/') }}">
-                          Tomorrow</a>
+                          Portfolio</a>
                   </li>
               </ul>
 
